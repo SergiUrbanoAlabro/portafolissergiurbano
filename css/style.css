@@ -1,0 +1,323 @@
+:root {
+    --colorPrincipal: #dae3e5;
+    --colorSecundari: #a1c6ea;
+    --colorLletra: #3f6397;
+}
+
+/*Modificacio global*/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*ScrollSnap*/
+.serveis,
+.navegacio-principal,
+.formulari {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    /* El body i html amb aquesta configuració fa que 1rem = 10px  */
+    font-family: "Krub", sans-serif;
+    font-weight: 400;
+    background-image: linear-gradient(to top, var(--gris-clar) 0%, var(--blanc) 100%);
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
+    background-color: var(--blanc);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/*Utilitats*/
+.w-sm-100 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.alinear-dreta {
+    justify-content: flex-end;
+}
+
+/*Tipografía*/
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.contenidor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.boto {
+    background-color: var(--colorSecundari);
+    color: var(--blanc);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: 480px) {
+    .boto {
+        width: auto;
+    }
+}
+
+.boto:hover {
+    cursor: pointer;
+}
+
+.titol {
+    color: var(--colorLletra);
+    background-color: var(--colorSecundari);
+    margin: 0;
+    padding: 2rem;
+    text-transform: uppercase;
+    position:fixed;
+    width: 100%;
+}
+
+.titol span {
+    font-size: 2.8rem;
+}
+
+.nav-bg {
+    background-color: var(--colorPrincipal);
+    position:fixed;
+    width: 100%;
+    margin-top: 8rem;
+    border-bottom: 1px solid var(--colorLletra);
+}
+
+.navegacio-principal {
+    display: block;
+}
+
+
+.navegacio-principal a {
+    display: block;
+    text-align: center;
+    color: var(--colorLletra);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    transition: .15s ease-in;
+}
+
+.navegacio-principal a:hover {
+    background-color: var(--colorSecundari);
+}
+
+.sobremi {
+    background-color: var(--colorSecundari);
+    padding: 1rem;
+    padding-top: 4rem;
+}
+
+.sobremi .contingut-sobremi {
+    margin: 1rem;
+    background-color: var(--colorPrincipal);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+}
+
+.sobremi .contingut-sobremi h2 {
+    font-size: 4.4rem;
+    text-transform: uppercase;
+    color: var(--colorLletra);
+    width: 100%;
+}
+
+.sobremi .contingut-sobremi img {
+    max-width: 90%;
+    border-radius: 50%;
+}
+
+.sobremi .contingut-sobremi p {
+    width: 90%;
+    padding: 3rem;
+    line-height: 1.7;
+}
+
+/*Projectes*/
+.grid-projectes {
+    display: grid;
+    margin: 2rem;
+    gap: 2rem;
+}
+
+.grid-projectes .grid-obj {
+    background-color: var(--colorPrincipal);
+    padding: 2rem;
+    border-radius: 1rem;
+    align-items: center;
+}
+.grid-projectes .grid-obj .img{
+    max-width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*contacte*/
+.formulari {
+    background-color: var(--colorPrincipal);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.formulari fieldset {
+    border: none;
+}
+
+.formulari legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--colorLletra);
+}
+
+.camp {
+    margin-bottom: 1rem;
+}
+
+.camp label {
+    color: var(--blanc);
+    font-weight: 700;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.camp textarea {
+    height: 18rem;
+}
+
+
+/*Footer*/
+.footer {
+    text-align: center;
+    background-color: var(--colorSecundari);
+    margin: 0;
+    padding: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--colorLletra);
+}
+
+/*Media queries*/
+
+@media (min-width: 440px) {
+    .grid-projectes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .navegacio-principal {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+    }
+
+    .sobremi .contingut-sobremi img {
+        max-width: 30rem;
+    }
+
+    .sobremi .contingut-sobremi {
+        flex-direction: row;
+    }
+
+    .sobremi .contingut-sobremi h2 {
+        display: block;
+    }
+
+    .sobremi .contingut-sobremi p {
+        width: 40%;
+        padding: 3rem;
+        line-height: 1.7;
+    }
+
+    .contenidor-camps {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+
+    .camp:nth-child(3),
+    .camp:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+
+    .grid-projectes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1080px) {
+    .grid-projectes {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
